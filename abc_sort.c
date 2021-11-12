@@ -1,29 +1,22 @@
-/* This program would sort the input strings in
- * an ascending order and would display the same
- */
 #include<stdio.h>
 #include<string.h>
 
-int main(){
-   int i,j,count;
-   char str[25][25],temp[25];
-   puts("How many strings u are going to enter?: ");
-   scanf("%d",&count);
+int abc_sort(char * str_array)
+{
+   int i,j,count = 20, temp;
+   char str_array;
 
-   puts("Enter Strings one by one: ");
-   for(i=0;i<=count;i++)
-      gets(str[i]);
    for(i=0;i<=count;i++)
       for(j=i+1;j<=count;j++){
-         if(strcmp(str[i],str[j])>0){
-            strcpy(temp,str[i]);
-            strcpy(str[i],str[j]);
-            strcpy(str[j],temp);
+         if(strcmp(str_array[i],str_array[j])>0){
+            strcpy(temp,str_array[i]);
+            strcpy(str_array[i],str_array[j]);
+            strcpy(str_array[j],temp);
          }
       }
-   printf("Order of Sorted Strings:");
+   printf("Abecedno sortiran string:");
    for(i=0;i<=count;i++)
-      puts(str[i]);
+      puts(str_array[i]);
    
-   return 0;
+   return str_array;
 }

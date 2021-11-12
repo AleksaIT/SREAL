@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int palindrom_check(char * str_array) {
   int n, reversed = 0, remainder, original;
     printf("Enter an integer: ");
     scanf("%d", &n);

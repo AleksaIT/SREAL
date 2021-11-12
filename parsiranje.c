@@ -1,78 +1,51 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+
+int all_caps (char * str_array);
+int abc_sort (char * str_array);
+int no_numbers (char * str_array);
+int palindrom_check (char * str_array);
+
 int main()
 {
-    char str1[20],str2[20];
+    char str_array[20];
     int ch,i,j;
+
+    scanf("Unesite string: %s", str_array);
+
     do
     {
-        printf("\tMENU");
+        printf("\tMENI");
         printf("\n------------------------------\n");
-        printf("1:Find Length of String");
-        printf("\n2:Find Reverse of String");
-        printf("\n3:Concatenate Strings");
-        printf("\n5:Copy String ");
-        printf("\n5:Compare Strings");
-        printf("\n6:Exit");
+        printf("\n1:Sva slova stringa prebaci u velika slova");
+        printf("\n2:Sortiraj string po abecednom redosledu");
+        printf("\n3:Ukloni sve brojeve iz stringa");
+        printf("\n4:Proveri da li je string palindrom");
+        printf("\n5:Napusti program");
         printf("\n------------------------------\n");
-        printf("\nEnter your choice: ");
+        printf("\nUnesite opciju: ");
         scanf("%d",&ch);
         switch(ch)
         {
             case 1:
-                printf("Enter String: ");
-                scanf("%s",str1);
-                i=strlen(str1);
-                printf("Length of String : %d\n\n",i);
+                all_caps(str_array);
             break;
             case 2:
-                printf("Enter String: ");
-                scanf("%s",str1);
-                //strrev(str1);
-                printf("Reverse string : %s\n\n",str1);
+                abc_sort(str_array);
             break;
             case 3:
-                printf("\nEnter First String: ");
-                scanf("%s",str1);
-                printf("Enter Second string: ");
-                scanf("%s",str2);
-                strcat(str1,str2);
-                printf("String After Concatenation : %s\n\n",str1);
+                no_numbers(str_array);
             break;
             case 4:
-                printf("Enter a String1: ");
-                scanf("%s",str1);
-                printf("Enter a String2: ");
-                scanf("%s",str2);
-                printf("\nString Before Copied:\nString1=\"%s\",String2=\"%s\"\n",str1,str2);
-                strcpy(str2,str1);
-                printf("-----------------------------------------------\n");
-                printf("\"We are copying string String1 to String2\" \n");
-                printf("-----------------------------------------------\n");
-                printf("String After Copied:\nString1=\"%s\", String2=\"%s\"\n\n",str1,str2);
+                palindrom_check(str_array);
             break;
             case 5:
-                printf("Enter First String: ");
-                scanf("%s",str1);
-                printf("Enter Second String: ");
-                scanf("%s",str2);
-                j=strcmp(str1,str2);
-                if(j==0)
-                {
-                    printf("Strings are Same\n\n");
-                }
-                else
-                {
-                    printf("Strings are Not Same\n\n");
-                }
-            break;
-            case 6:
                 exit(0);
             break;
             default:
-                printf("Invalid Input. Please Enter valid Input.\n\n ");
+                printf("Nepostojeca opcija. Molimo Vas odaberite opciju od 1 do 5.\n\n ");
         }
-    }while(ch!=6);
+    }while(ch!=5);
     return 0;
 }

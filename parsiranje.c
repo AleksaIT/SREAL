@@ -7,7 +7,7 @@ int abc_sort (char * str_array);
 int no_numbers (char * str_array);
 int palindrom_check (char * str_array);
 
-int main()
+int main(argv )
 {
     char str_array[20];
     int ch,i,j;

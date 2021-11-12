@@ -15,9 +15,9 @@ int palindrom_check(char * str_array) {
 
     // palindrome if orignal and reversed are equal
     if (original == reversed)
-        printf("%d is a palindrome.", original);
+        printf("%d je palindrom.", original);
     else
-        printf("%d is not a palindrome.", original);
+        printf("%d nije palindrom.", original);
 
     return 0;
 }

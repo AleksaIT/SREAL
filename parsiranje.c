@@ -1,3 +1,4 @@
+#include "helper.h"
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -7,7 +8,7 @@ int abc_sort (char * str_array);
 int no_numbers (char * str_array);
 int palindrom_check (char * str_array);
 
-int main(argv )
+int main(int argc, char** argv)
 {
     char str_array[20];
     int ch,i,j;

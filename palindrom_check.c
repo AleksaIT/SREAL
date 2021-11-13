@@ -1,3 +1,4 @@
+#include "helper.h"
 #include <stdio.h>
 
 int palindrom_check(char * str_array) {

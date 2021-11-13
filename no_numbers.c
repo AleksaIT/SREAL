@@ -1,3 +1,4 @@
+#include "helper.h"
 #include<stdio.h>
 
 int no_numbers(char * str_array)

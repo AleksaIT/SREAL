@@ -1,7 +1,7 @@
 #include "helper.h"
 #include<stdio.h>
 
-int no_numbers(char * string)
+int no_numbers(char* string)
 {
     char string;
     int i,j;

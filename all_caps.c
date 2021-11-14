@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int all_caps(char * string)
+int all_caps(char* string)
 {
 	unsigned int i, tmp = strlen(string);
 

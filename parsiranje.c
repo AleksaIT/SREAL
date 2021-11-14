@@ -3,10 +3,10 @@
 #include<string.h>
 #include<stdlib.h>
 
-int all_caps (char * str_array);
-int abc_sort (char * str_array);
-int no_numbers (char * str_array);
-int palindrom_check (char * str_array);
+int all_caps (char* string);
+int abc_sort (char* string);
+int no_numbers (char* string);
+int palindrom_check (char* string);
 
 int main(int argc, char** argv)
 {

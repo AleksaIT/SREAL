@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 
-int abc_sort(char * string)
+int abc_sort(char* string)
 {
 	int i,j, pom = strlen(string);
 	char tmp;

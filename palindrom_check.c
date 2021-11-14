@@ -1,7 +1,7 @@
 #include "helper.h"
 #include <stdio.h>
 
-int palindrom_check(char * str_array) {
+int palindrom_check(char* string) {
   int n, reversed = 0, remainder, original;
     original = n;
 

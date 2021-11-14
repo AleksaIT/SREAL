@@ -10,43 +10,40 @@ int palindrom_check (char * str_array);
 
 int main(int argc, char** argv)
 {
-    char str_array[20];
-    int ch,i,j;
+    char* lowercasetext = argv[1];
+    char* unsorted = argv[2];
+    char* withnumbers = argv[3];
+    char* palindrom = argv[4];
 
-    scanf("Unesite string: %s", str_array);
-
-    do
+    all_caps(lowercasetext);
+    abc_sort(unsorted);
+    no_numbers(withnumbers);
+    palindrom_check(palindrom);
+//int opcija = argv[5];
+/*
+ do
     {
-        printf("\tMENI");
-        printf("\n------------------------------\n");
-        printf("\n1:Sva slova stringa prebaci u velika slova");
-        printf("\n2:Sortiraj string po abecednom redosledu");
-        printf("\n3:Ukloni sve brojeve iz stringa");
-        printf("\n4:Proveri da li je string palindrom");
-        printf("\n5:Napusti program");
-        printf("\n------------------------------\n");
-        printf("\nUnesite opciju: ");
-        scanf("%d",&ch);
-        switch(ch)
+        switch(opcija)
         {
             case 1:
-                all_caps(str_array);
+	all_caps(lowercase);
             break;
             case 2:
-                abc_sort(str_array);
+	unsorted(abc_sort);
             break;
             case 3:
-                no_numbers(str_array);
+	withnumbers(no_numbers);
             break;
             case 4:
-                palindrom_check(str_array);
+  	palindrom(palindrom_check);
             break;
             case 5:
                 exit(0);
             break;
             default:
-                printf("Nepostojeca opcija. Molimo Vas odaberite opciju od 1 do 5.\n\n ");
+                printf("Nepostojeca opcija. Molimo Vas unesite opciju od 1 do 5 u poslednji parametar.\n\n ");
         }
-    }while(ch!=5);
+    }while(opcija!=5);
+*/
     return 0;
 }

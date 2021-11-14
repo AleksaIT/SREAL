@@ -2,13 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
-int all_caps(char * str_array)
+int all_caps(char * string)
 {
-    char str_array;
+	unsigned int i, tmp = strlen(string);
 
-    strupr(str_array); // Convert to uppercase
-
-    printf("All caps string je : %s", str_array);
-
-    return str_array;
+	for(i = 0; i < tmp; i++){
+		string[i]=toupper(string[i]);
+	}
+	printf("\nKonverzija stringa u velika slova: %s\n", string);
 }

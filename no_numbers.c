@@ -1,19 +1,19 @@
 #include "helper.h"
 #include<stdio.h>
 
-int no_numbers(char * str_array)
+int no_numbers(char * string)
 {
-    char str_array;
+    char string;
     int i,j;
-     for (i = 0; str_array[i] != '\0'; ++i) {
-     while (str_array[i] >= '0' && str_array[i] <= '9') {
-         for (j = i; str_array[j] != '\0'; ++j) {
-            str_array[j] = str_array[j + 1];
+     for (i = 0; string[i] != '\0'; ++i) {
+     while (string[i] >= '0' && string[i] <= '9') {
+         for (j = i; string[j] != '\0'; ++j) {
+            string[j] = string[j + 1];
          }
-         str_array[j] = '\0';
+         string[j] = '\0';
       }
    }
-       printf("String nakon uklanjanja brojeva: %s\n",str_array);
+       printf("String nakon uklanjanja brojeva: %s\n", string);
 
-       return str_array;
+       return string;
 }

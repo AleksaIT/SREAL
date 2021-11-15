@@ -1,20 +1,19 @@
 #include "helper.h"
 #include <stdio.h>
+#include <string.h>
 
 int palindrom_check(char* string) {
-  int n, reversed = 0, remainder, original;
-    original = n;
 
-    while (n != 0) {
-        remainder = n % 10;
-        reversed = reversed * 10 + remainder;
-        n /= 10;
+    int l = 0;
+    int h = strlen(string) - 1;
+ 
+    while (h > l)
+    {
+        if (string[l++] != string[h--])
+        {
+            printf("%s nije palindrom\n", string);
+            return;
+        }
     }
-
-    if (original == reversed)
-        printf("%d je palindrom.", original);
-    else
-        printf("%d nije palindrom.", original);
-
-    return 0;
+    printf("%s je palindrom\n", string);
 }

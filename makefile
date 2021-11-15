@@ -1,6 +1,6 @@
-all: main
-main: main.o abc_sort.o all_caps.o no_numbers.o palindrom_check.o
-	gcc -o main main.o abc_sort.o all_caps.o no_numbers.o palindrom_check.o
+all: parsiranje
+parsiranje: main.o abc_sort.o all_caps.o no_numbers.o palindrom_check.o
+	gcc -o parsiranje main.o abc_sort.o all_caps.o no_numbers.o palindrom_check.o
 main.o: main.c helper.h
 	gcc -c main.c
 abc_sort.o: abc_sort.c helper.h

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int palindrom_check(char* string) {
+void palindrom_check(char* string) {
 
     int l = 0;
     int h = strlen(string) - 1;
@@ -11,9 +11,9 @@ int palindrom_check(char* string) {
     {
         if (string[l++] != string[h--])
         {
-            printf("%s nije palindrom\n", string);
-            return;
+            printf("\n%s nije palindrom\n", string);
+		return;
         }
     }
-    printf("%s je palindrom\n", string);
+    printf("\n%s je palindrom\n", string);
 }

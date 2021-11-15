@@ -1,6 +1,7 @@
 #include "helper.h"
 #include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 
 int no_numbers(char* string)
 {

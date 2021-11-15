@@ -3,17 +3,16 @@
 
 int no_numbers(char* string)
 {
-    char string;
-    int i,j;
-     for (i = 0; string[i] != '\0'; ++i) {
-     while (string[i] >= '0' && string[i] <= '9') {
-         for (j = i; string[j] != '\0'; ++j) {
-            string[j] = string[j + 1];
-         }
-         string[j] = '\0';
-      }
-   }
-       printf("String nakon uklanjanja brojeva: %s\n", string);
+	int tmp = strlen(string);
 
-       return string;
+	for (int i=0; i < tmp; i++){
+		if(isdigit(string[i])){
+			memmove(&string[i], &string[i + 1], tmp - i);  
+		}
+	}
+   
+	printf("\nString sa izbacenim brojevima: %s\n", string);
 }
+
+
+   //https://stackoverflow.com/

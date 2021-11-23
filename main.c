@@ -3,10 +3,10 @@
 #include<string.h>
 #include<stdlib.h>
 
-//int all_caps (char* string);
-//int abc_sort (char* string);
-//int no_numbers (char* string);
-//int palindrom_check (char* string);
+int all_caps (char* string);
+int abc_sort (char* string);
+int no_numbers (char* string);
+void palindrom_check (char* string);
 
 int main(int argc, char** argv)
 {
@@ -30,20 +30,20 @@ int opcija = tmp2;
         switch(opcija)
         {
             case 1:
-    for (int i=1; i < argc; i++) {
+    for (int i=1; i < argc-1; i++) {
 	all_caps(argv[i]); }
             break;
             case 2:
-    for (int i=1; i < argc; i++) {
-	unsorted(abc_sort); }
+    for (int i=1; i < argc-1; i++) {
+	abc_sort(argv[i]); }
             break;
             case 3:
-    for (int i=1; i < argc; i++) {
-	withnumbers(no_numbers); }
+    for (int i=1; i < argc-1; i++) {
+	no_numbers(argv[i]); }
             break;
             case 4:
-    for (int i=1; i < argc; i++) {
-  	palindrom(palindrom_check); }
+    for (int i=1; i < argc-1; i++) {
+  	palindrom_check(argv[i]); }
             break;
             case 5:
                 exit(0);

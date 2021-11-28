@@ -24,7 +24,6 @@ int main(int argc, char** argv)
     char* tmp = argv[argc-1];
 	char opcija = tmp[0];
 
-    {
         switch(opcija)
         {
             case '1':
@@ -49,5 +48,5 @@ int main(int argc, char** argv)
             default:
                 printf("Nepostojeca opcija. Molimo Vas unesite opciju od 1 do 5 u poslednji parametar.\n\n ");
         }
-    //return 0;
+    return 0;
 }

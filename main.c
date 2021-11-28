@@ -21,37 +21,33 @@ int main(int argc, char** argv)
     no_numbers(withnumbers);
     palindrom_check(palindrom);*/
 
-int tmp1 = argc;
-int tmp2 = atoi(argv[tmp1]);
+    char* tmp = argv[argc-1];
+	char opcija = tmp[0];
 
-int opcija = tmp2;
- do
     {
         switch(opcija)
         {
-            case 1:
+            case '1':
     for (int i=1; i < argc-1; i++) {
 	all_caps(argv[i]); }
             break;
-            case 2:
+            case '2':
     for (int i=1; i < argc-1; i++) {
 	abc_sort(argv[i]); }
             break;
-            case 3:
+            case '3':
     for (int i=1; i < argc-1; i++) {
 	no_numbers(argv[i]); }
             break;
-            case 4:
+            case '4':
     for (int i=1; i < argc-1; i++) {
   	palindrom_check(argv[i]); }
             break;
-            case 5:
+            case '5':
                 exit(0);
             break;
             default:
                 printf("Nepostojeca opcija. Molimo Vas unesite opciju od 1 do 5 u poslednji parametar.\n\n ");
         }
-    }while(opcija!=5);
-
-    return 0;
+    //return 0;
 }
